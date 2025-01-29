@@ -1,0 +1,16 @@
+version: '3'
+services:
+  thrivex-admin:
+    image: juneink/thrivex-admin:latest
+    container_name: thrivex-admin
+    ports:
+      - "5173:5173"
+    environment:
+      - VITE_VERSION=${VITE_VERSION}
+      - VITE_PROJECT_API=${VITE_PROJECT_API}
+      - VITE_BAIDU_TONGJI_SITE_ID=${VITE_BAIDU_TONGJI_SITE_ID}
+      - VITE_BAIDU_TONGJI_ACCESS_TOKEN=${VITE_BAIDU_TONGJI_ACCESS_TOKEN}
+      - VITE_AI_APIPASSWORD=${VITE_AI_APIPASSWORD}
+      - VITE_AI_MODEL=${VITE_AI_MODEL}
+      - VITE_GAODE_WEB_API=${VITE_GAODE_WEB_API}
+    restart: always 
