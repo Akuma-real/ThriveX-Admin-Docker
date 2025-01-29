@@ -13,4 +13,10 @@ services:
       - VITE_AI_APIPASSWORD=${VITE_AI_APIPASSWORD}
       - VITE_AI_MODEL=${VITE_AI_MODEL}
       - VITE_GAODE_WEB_API=${VITE_GAODE_WEB_API}
-    restart: always 
+    restart: always
+    networks:
+      - thrivex-network
+
+networks:
+  thrivex-network:
+    driver: bridge 

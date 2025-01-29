@@ -25,5 +25,5 @@ ARG VITE_GAODE_WEB_API
 # 暴露端口
 EXPOSE 5173
 
-# 启动命令
-CMD ["npm", "run", "dev"] 
+# 启动命令 - 添加 --host 0.0.0.0 参数
+CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0"] 
